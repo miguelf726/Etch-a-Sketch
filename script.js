@@ -29,14 +29,12 @@ function createGrid() {
 }
 createGrid()
 
-// const btn = document.querySelector(".newGrid");
-// btn.addEventListener("click", () => {
-//   gridSize = prompt("Grid size?", "")
+const btn = document.querySelector(".newGrid");
+btn.addEventListener("click", () => {
+  gridSize = prompt("Grid size?", "")
   
-// let oldRow = document.querySelector(".cell")
-// oldRow.forEach(row=>{
-//     row.remove()
-// })
+
+})
 
 // createGrid(gridSize)
   
