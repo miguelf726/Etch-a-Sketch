@@ -1,6 +1,6 @@
 const container = document.querySelector("#container");
 
-function createRows() {
+function createRows(container) {
   let row = document.createElement("div");
 
   container.appendChild(row);
@@ -11,34 +11,35 @@ function createCells(row) {
   const cell = document.createElement("div");
   cell.classList.add("cell");
   row.appendChild(cell);
-  cell.style.width=`960/${gridSize}`
-  cell.style.height=`960/${gridSize}`
+
   cell.addEventListener("mouseover", () => {
     cell.style.backgroundColor = "black";
   });
-  return cell
 }
 
 function createGrid(gridSize) {
   let row;
   for (let i = 0; i < gridSize; i++) {
-    row = createRows();
+    row = createRows(container);
 
     for (let j = 0; j < gridSize; j++) {
       createCells(row);
     }
   }
-
 }
-let gridSize = 16;
+let gridSize = 20;
 createGrid(gridSize);
 
-function removeGrid() {
-  container.remove();
+function removeGrid(cell) {
+let cells = document.querySelectorAll("#container>div")
+cells.forEach(cell=>{
+    cell.remove()
+})
+    
 }
 const btn = document.querySelector(".newGrid");
 btn.addEventListener("click", () => {
-  gridSize = prompt("Grid size?", "");
+  gridSize = prompt("Grid size?");
   removeGrid();
 
   createGrid(gridSize);
