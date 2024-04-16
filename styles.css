@@ -4,30 +4,38 @@
   box-sizing: border-box;
 }
 
-
-
-
-
 #container > div {
   outline: solid black;
-  width: 60px;
+  /* width: 60px; */
   height: 60px;
+  display: flex;
+  flex: 1;
 }
 
 #container {
   display: flex;
   flex-wrap: wrap;
   width: 960px;
+
   height: 960px;
   margin: 0 auto;
 }
+
+.cell {
+  outline: solid black;
+  width: 60px;
+  height: 60px;
+  display: flex;
+
+}
 .btn-container {
-    padding: 50px 0;
-    display: flex;
-    align-items: center;justify-content: center;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
-    padding: 12px;
-    border-radius: 8px;
+  padding: 12px;
+  border-radius: 8px;
 }
