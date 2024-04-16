@@ -5,9 +5,9 @@
 }
 
 #container > div {
-  outline: solid black;
+  /* outline: solid black; */
   /* width: 60px; */
-  height: 60px;
+  /* height: 60px; */
   display: flex;
   flex: 1;
 }
@@ -15,6 +15,7 @@
 #container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   width: 960px;
 
   height: 960px;
@@ -23,10 +24,8 @@
 
 .cell {
   outline: solid black;
-  width: 60px;
-  height: 60px;
-  display: flex;
-
+ 
+  flex: 1;
 }
 .btn-container {
   padding: 50px 0;

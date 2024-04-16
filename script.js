@@ -11,14 +11,16 @@ function createCells(row) {
   const cell = document.createElement("div");
   cell.classList.add("cell");
   row.appendChild(cell);
+  cell.style.width=`960/${gridSize}`
+  cell.style.height=`960/${gridSize}`
   cell.addEventListener("mouseover", () => {
     cell.style.backgroundColor = "black";
   });
+  return cell
 }
 
 function createGrid(gridSize) {
   let row;
-
   for (let i = 0; i < gridSize; i++) {
     row = createRows();
 
@@ -26,6 +28,7 @@ function createGrid(gridSize) {
       createCells(row);
     }
   }
+
 }
 let gridSize = 16;
 createGrid(gridSize);
