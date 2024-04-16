@@ -16,27 +16,30 @@ function createCells(row) {
   });
 }
 
-function createGrid() {
+function createGrid(gridSize) {
   let row;
 
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < gridSize; i++) {
     row = createRows();
 
-    for (let j = 0; j < 16; j++) {
+    for (let j = 0; j < gridSize; j++) {
       createCells(row);
     }
   }
 }
-createGrid()
+let gridSize = 16;
+createGrid(gridSize);
 
+function removeGrid() {
+  container.remove();
+}
 const btn = document.querySelector(".newGrid");
 btn.addEventListener("click", () => {
-  gridSize = prompt("Grid size?", "")
-  
+  gridSize = prompt("Grid size?", "");
+  removeGrid();
 
-})
+  createGrid(gridSize);
+});
 
-// createGrid(gridSize)
-  
 //   ;
 // });
